@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock.Paper.Scissors</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <center>
+            <button class="main" v-show=" !display " @click="onClick()">Start game</button>
+            <div v-show=" display " class="container ">
+                <button class="close" v-show=" display " @click="close()">Close</button>
+
+                <h1>{{ userScore }} - {{ computerScore }}</h1>
+                <h3>{{result}}</h3>
+
+
+                <div class="choose ">
+
+                    <button class="btn btn1 " @click="choose( 'rock ') ">
+                        <img src="Rock.png " class="fa fa-hand-rock-o ">
+                      </button>
+
+                    <button class="btn btn2 " @click="choose( 'paper ') ">
+                        <img src="Paper.png "class="fa fa-hand-paper-o ">
+                      </button>
+                    <button class="btn btn3 " @click="choose( 'scissors ') ">
+                    <img src="Scissors.png " class="fa fa-hand-scissors-o ">
+                    </button>
+                </div>
+            </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script src="script.js "></script>
+</body>
+
+
+
+</html>
